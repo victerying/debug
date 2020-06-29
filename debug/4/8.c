@@ -11,16 +11,16 @@ int main() {
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-    for(i = 0; i <= 9; i++){
-        for(m = i; m <= 9; m++){
-            max = m;
+    for(i = 0; i <= 8; i++){
+        max = i;
+        for(m = i; m <= 8; m++){
             if(numbers[max] < numbers[m+1]){
                 max = m + 1;
             }
         }
         inter = numbers[i];
         numbers[i] = numbers[max];
-        numbers[max] = numbers[i];
+        numbers[max] = inter;
     }
     
     for(i = 0; i <= 9; i++){
