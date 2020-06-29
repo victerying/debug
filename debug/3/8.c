@@ -15,7 +15,6 @@ int main(){
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++){
 			scanf("%d",&matrix[i][j]);
-			if(j<n-1)scanf(" ");
 		}
 	}
 	max=m*n;
@@ -23,8 +22,10 @@ int main(){
 	//output the first line
 	//printf("\nThe first line of the original matrix is:");
 	for(j=0;j<n;j++){
-		printf("%d ",matrix[0][j]);
-		count++;
+		printf("%d",matrix[0][j]);
+        count++;
+        if(count<max)                                                   
+            printf(" ");
 	}
 	//printf("\n");
 		
@@ -47,7 +48,8 @@ int main(){
 		for(j=0;j<m-1;j++){
 			printf("%d",matrix_[0][j]);
 			count++;
-			if(count<max)printf(" ");
+			if(count<max)
+                printf(" ");
 		}
 	
 		//cover original matrix with new matrix_	

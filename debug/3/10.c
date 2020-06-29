@@ -12,7 +12,7 @@ int main() {
     
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
-            scanf("%d ", &matrix[i][j]);
+            scanf("%d", &matrix[i][j]);
         }
     }
 
@@ -51,16 +51,11 @@ int main() {
         {
             for (int i = m - 1; i >= k; i--)
             {
-                printf("%d", matrix[i][l]);
-                if (i != k){
-                    printf(" ");
-            }
-
+                printf("%d ", matrix[i][l]);
             }
             l++;    
         }        
     }
-
-
+    printf("\b");
     return 0;
 }
