@@ -7,24 +7,24 @@ double f(int p, int q, double x);
 int main() {
     int p;
     int q;
-    scanf("%d%d", &p, &q);
+    scanf("%d %d", &p, &q);
     printf("%.4f\n", bisection(p, q, f));
     return 0;
 }
 
 double bisection(int p, int q, double (*func)(int, int, double)) {
-    int a,b,c;
-    a=-20;
-    b=20;
-    c=(a+b)/2;
-    while(f(p,q,c)>=EPSILON){
-        if(f(p,q,a)*f(p,q,c)<0){
-            b=c;
+    double a,b,c;
+    a = -20;
+    b = 20;
+    c = (a + b) / 2;
+    while(fabs(f(p,q,c))>=EPSILON){
+        if(f(p,q,a) * f(p,q,c)<0){
+            b = c;
         }
-        else{
-            a=c;
+        else if(f(p,q,b) * f(p,q,c)<0){
+            a = c;
         }
-        c=(a+b)/2.0;
+        c = (a + b) / 2;
     }
     return c;
 }

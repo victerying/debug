@@ -1,20 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    scanf("%d",&n);
-    int i=0;
-    int x;
-    int y;
-    int m=1;
-    int b=1;
-    for(x = 0; x <= n / 2; x++){
-        for(y = 0; y <= n / 3; y++){
-            if(x * 2 + y * 3 == n){
-                i++;
-            }
-        }
+    int i,N;
+    int a[51] = {0};
+    scanf("%d",&N);
+    a[2] = 1;
+    a[3] = 1;
+    a[4] = 1;
+    for(i = 5;i <= N;i++){
+        a[i] = a[i - 2] + a[i - 3];
     }
-    printf("%d",i);
+    printf("%d",a[N]);
     return 0;
 }

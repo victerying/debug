@@ -2,7 +2,6 @@
 
 int main() {
     int n = 10;
-    int m;
     int numbers[10];
     int i,j;
     int tmpt;
@@ -12,12 +11,12 @@ int main() {
         scanf("%d", &numbers[i]);
     }
 
-    for (i = 0; i < n; i++) {
-        for (j = i; j < n; j++) {
-            if (numbers[i] < numbers[j]){
-                tmpt = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] =   tmpt;
+    for (i = 0; i < n - 1; i++) {
+        for (j = n - 1 ; j > i; j--) {
+            if (numbers[j] > numbers[j-1]){
+                tmpt = numbers[j];
+                numbers[j] = numbers[j-1];
+                numbers[j-1] = tmpt;
             }
         }
     }

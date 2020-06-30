@@ -5,33 +5,19 @@ int main() {
     char str[21];
     int i, j;
     for(i = 0; i < 10; i++){
-        for(j = 0; j < 21; j++){
-            scanf("%c", &string[i][j]);
-            if(string[i][j] = '\n'){
-                string[i][j] = '\0';
-                break;
-            }
-        }
+        scanf("%s",string[i]);
     }
     for (i = 0; i < 9; i++){
-        for (j = 0; j <= 9-i; j++){
-            if (strcmp(string[j+1], string[j]) > 0){
+        for (j = 0; j <= 8-i; j++){
+            if (strcmp(string[j+1], string[j]) < 0){
                 strcpy(str,string[j+1]);
                 strcpy(string[j+1],string[j]);
                 strcpy(string[j],str);
             }
         }
     }
-    for (i = 0; i < 10; i++){
-        for (j = 0; j < 21; j++){
-            if (string[i][j] == '\0'){
-                printf ("\n");
-                break;
-            }
-            else{
-                printf ("%c", string[i][j]);
-            }
-        }
+    for(i = 0; i < 10; i++){
+        printf("%s\n",string[i]);
     }
-    return 0;
+   return 0;
 }

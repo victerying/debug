@@ -14,12 +14,12 @@ int main() {
     a[2]=1;
     a[3]=1;
     a[1]=0;
-        int i;
+    int i;
     for( i=4;i<=n;i++){
         a[i]=a[i-2]+a[i-3];
         
     }
-        printf("%d",a[i]);
+        printf("%d",a[n]);
     }
     return 0;
 }

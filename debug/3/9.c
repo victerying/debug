@@ -32,8 +32,7 @@ int main() {
             matrixpass[i][j] = 0;
         }
     }
-    if(times <= m * n){
-        for(i = 0; i < 6; i++){
+    while(times < m * n){
         if(orientation % 4 == 0){  //right
             while(matrixpass[mIndex][nIndex] == 0 && nIndex <= l - 1){
                 printf("%d", matrix[mIndex][nIndex]);
@@ -93,7 +92,6 @@ int main() {
         k--;
         l--;
         p++;
-      }
     }
     return 0;
 }

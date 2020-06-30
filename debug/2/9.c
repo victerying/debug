@@ -7,21 +7,17 @@ int main() {
 	int m;
 	int n;
 	
-	//主循环参数
 	int i, j, k;
 	
-	//乘积矩阵初始化
-	for (i = 0; i <= 10; i++){
-		for (k = 0; k <= 10; k++){
+	for (i = 0; i < 10; i++){
+		for (k = 0; k < 10; k++){
 			matrix_c[i][k] = 0;
 		}
 		
 	}
 	
-	//m、n输入
 	scanf("%d %d", &m, &n);
 	
-	//矩阵输入
 	for (i = 0; i < m; i++){
 		for (k = 0; k < n; k++){
 			scanf("%d", &matrix_a[i][k]);
@@ -35,7 +31,6 @@ int main() {
 		}
 	}
 	
-	//乘法
 	for (i = 0; i < m; i++){
 		for(j = 0; j < m; j++){
 			for (k = 0; k < n; k++){
@@ -50,10 +45,7 @@ int main() {
 				if (k < m - 1 ) {
 					printf(" ");
 				}
-				if (i == m - 1) {
-					continue;
-				}
-				if (k == m - 1) {
+				if (k == m - 1 && m != m - 1) {
 					printf("\n");
 				}
 			}

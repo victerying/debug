@@ -5,7 +5,6 @@ int main() {
     int m;
     int numbers[10];
     int i;
-    int max;
     int k;
     int j;
     int o;
@@ -14,6 +13,7 @@ int main() {
         scanf("%d", &numbers[i]);
     }
     for (j = 0; j < n; j++) {
+        m = j;
         for(k = j; k < n - 1; k++){
             if(numbers[k] < numbers[k+1]){
                 m = k + 1;
