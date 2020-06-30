@@ -6,6 +6,8 @@ int main(){
         if((y % 4 == 0 && y % 100 != 0) || y % 400==0){
             if(d>=1 && d<=29)
                 printf("YES");
+            else
+                printf("NO");
         }
         else if(d>=1 && d<=28)
             printf("YES");
@@ -23,7 +25,8 @@ int main(){
             printf("YES");
         else 
             printf("NO");
-    }
+    }else 
+        printf("NO");
        
    
     return 0;

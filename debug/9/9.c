@@ -4,7 +4,7 @@ int main() {
     int n;
     scanf("%d",&n);
     
-    int a[50];
+    int a[51];
     if(n==2){
         printf("1");
     }

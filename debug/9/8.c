@@ -2,7 +2,7 @@
 
 int main() {
     int i,N;
-    int a[50] = {0};
+    int a[51] = {0};
     scanf("%d",&N);
     a[2] = 1;
     a[3] = 1;

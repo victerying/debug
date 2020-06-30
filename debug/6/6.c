@@ -18,25 +18,25 @@ int main() {
         char str[2] = "\0";
         str[0] = input;
         if (strcmp(str, rr) == 0){
-            if (strcmp(oprator, plus)){
+            if (strcmp(oprator, plus)==0){
                 r = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (strcmp(oprator, minus)==0){
                 r = 0;
             }else{
                 r = 1;
             }
         }else if (strcmp(str, ww) == 0){
-            if (strcmp(oprator, plus)){
+            if (strcmp(oprator, plus)==0){
                 w = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (strcmp(oprator, minus)==0){
                 w = 0;
             }else{
                 w = 1;
             }
         }else if(strcmp(str, xx) == 0){
-            if (strcmp(oprator, plus)){
+            if (strcmp(oprator, plus)==0){
                 x = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (strcmp(oprator, minus)==0){
                 x = 0;
             }else{
                 x = 1;
@@ -49,7 +49,7 @@ int main() {
         }
     }
     
-    int output = x * pow(2,0) + w * pow(2,1) + r * pow(2,2);
+    int output = x * 1 + w * 2 + r * 4;
     printf("%d", output);
     
     

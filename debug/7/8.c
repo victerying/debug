@@ -14,7 +14,7 @@ int main()
             printf("NO");
         }
     }
-    else if(m!=2)
+    else if(m != 2 && m <= 12)
     {
         if(d<=30)
         {
@@ -25,7 +25,7 @@ int main()
             printf("NO");
         }
     }   
-    else
+    else if(m <= 12)
     {
         if(((y%100!=0)&&(y%4==0))||y%400==0)
         {
@@ -49,6 +49,7 @@ int main()
             printf("NO");
                 }
         }    
-    }
+    }else
+        printf("NO");
     return 0;
 }

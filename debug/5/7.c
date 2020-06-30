@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 void swap (char *b, char *c) {
-    char *temp;
-    temp = b;
-    b = c;
-    c = temp;
+    char temp[21];
+    strcpy(temp,b);
+    strcpy(b,c);
+    strcpy(c,temp);
 }
 int main() {
     char name[10][21];

@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, char *argv[]) {
+int main() {
 	int i = 0;
 	int chmod = 0;
 	int chmod_r = 0;
 	int chmod_w = 0;
 	int chmod_x = 0;
-	
-	
 	char temp[3];
-	char permission[10][3];
+	char permission[10][4];
 	
 	//输入
 	while (scanf("%s", temp) != EOF) {
@@ -19,7 +17,7 @@ int main(int argc, char *argv[]) {
 		}
 	
 	//第一行统计
-	for (i = 0; i < 3; i++) {
+	for (i = 0; permission[0][i] != '\0'; i++) {
 		if (permission[0][i] == 'r') {
 				chmod_r++;
 			}	
@@ -55,26 +53,9 @@ int main(int argc, char *argv[]) {
 					chmod_x--;
 				}
 		}
-		
 	}
-	
-		if (chmod_r > 0) {
-			chmod += 100;
-		}
-		if (chmod_w > 0) {
-			chmod += 10;
-		}
-		if (chmod_x > 0) {
-			chmod += 1;
-		}
-		  
-		if (chmod == 111) {
-			printf("7");
-		} else if (chmod == 110) {
-			printf("6");
-		} else if (chmod == 101) {
-					printf("5");
-				}
+    chmod = chmod_r * 4 + chmod_w * 2 + chmod_x;
+    printf("%d", chmod);
 
 	return 0;
 }

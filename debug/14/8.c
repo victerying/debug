@@ -10,7 +10,6 @@ int main()
     //
     for( hangshu = 1 ; hangshu <= shuru; hangshu ++)
     {
-        printf("\n");
         shuru2 = shuru - hangshu + 1;
         for(geshu = 1 ; geshu <= shuru-hangshu+1 ; geshu ++)
         {
@@ -25,6 +24,7 @@ int main()
             }
             shuru2 --;
         }
+        printf("\n");
     }
     return 0;
 }

@@ -4,6 +4,6 @@ int main() {
     double r;
     scanf("%lf",&r);
     printf("%.3lf\n",2*PI*r);
-    printf("%.3lf\nf",PI*r*r);
+    printf("%.3lf\n",PI*r*r);
     return 0;
 }
