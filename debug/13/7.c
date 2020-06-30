@@ -10,7 +10,7 @@ void count_off(Node *head, int n, int k, int m);
 
 int main() {
     int n, k, m;
-    scanf("%d%d%d", &n, &k, &m);
+    scanf("%d %d %d", &n, &k, &m);
     Node *head = circle_create(n);
     count_off(head, n, k, m);
     return 0;

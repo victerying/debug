@@ -10,9 +10,10 @@ void count_off(Node *head, int n, int k, int m);
 
 int main() {
     int n, k, m;
-    scanf("%d%d%d", &n, &k, &m);
+    scanf("%d %d %d", &n, &k, &m);
     Node *head = circle_create(n);
     count_off(head, n, k, m);
+    printf("\b");
     return 0;
 }
 
@@ -50,18 +51,18 @@ void count_off(Node *head, int n, int k, int m) {
     } 
     //printf("temp->data = %d\n", temp->data);
     if (m != 1) {
-    for (j = 0; j < n; j++) {
-        for (i = 0; i < m - 1; i++) {
-            if (i == m - 2) {
-                flag = temp;
-            }
-            temp = temp->next;
-        } 
-        printf("%d ", temp->data);
-        flag->next = temp->next;
-    	temp = temp->next;
-    }
-    } else {
+        for (j = 0; j < n; j++) {
+            for (i = 0; i < m - 1; i++) {
+                if (i == m - 2) {
+                    flag = temp;
+                }   
+                temp = temp->next;
+            } 
+            printf("%d ", temp->data);
+            flag->next = temp->next;
+    	    temp = temp->next;
+        }
+    }else {
         for (i = 1; i <= n; i++) {
             printf("%d ", i);
         }

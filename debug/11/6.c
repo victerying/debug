@@ -8,7 +8,7 @@ int main() {
     int bits[32];
     char result[32];
     
-    scanf("%s", &arr[32]);
+    scanf("%s", str);
     char input;
     int j = 0;
     
