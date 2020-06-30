@@ -4,6 +4,6 @@
 int main() {
 double radius;
     scanf("%lf", &radius);
-    printf("%.3f/n%.3f", 2*PI*radius, PI*pow(radius,2));
+    printf("%.3lf\n%.3lf", 2*PI*radius, PI*radius*radius);
     return 0;
 }
