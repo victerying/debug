@@ -12,7 +12,7 @@ int main()
     {
         printf("\n");
         shuru2 = shuru - hangshu + 1;
-        for(geshu = 1 ; geshu <= shuru ; geshu ++)
+        for(geshu = 1 ; geshu <= shuru-hangshu+1 ; geshu ++)
         {
             printf("%d",shuru2);
             if(shuru2 > 1)
