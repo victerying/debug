@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int matrix[100][100];
     int m;
     int n;
     
-    scanf("%d%d", &m, &n);
+    scanf("%d %d", &m, &n);
     
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -30,25 +31,32 @@ int main() {
                 printf("%d ", matrix[0][j]);
             }
         } else {
-    		for (int j = start; j < column; j++) {
-        		printf("%d ", matrix[start][j]);
-    		}
-    		for (int i = start + 1; i < row; i++) {
-       		 	printf("%d ", matrix[i][column-1]);
-    		}		
-    		for (int j = column-2; j >= start; j--) {
-       		 	printf("%d ", matrix[row-1][j]);
-   			}
-    		for (int i = row-2; i > start; i--) {
-        		printf("%d ", matrix[i][start]);
-   			}
+	    if(start!=0){
+		printf(" ");
+ 	    }
+	    printf("%d",matrix[start][start]);
+    	    for (int j = start+1; j < column; j++) {
+        	printf(" %d", matrix[start][j]);
+    	    }
+	    if(2 * start == m - 1) {
+                break;
+	    }
+    	    for (int i = start + 1; i < row; i++) {
+       		printf(" %d", matrix[i][column-1]);
+    	    }	
+	    if(2 * start == n - 1) {
+                break;
+            }	
+    	    for (int j = column-2; j >= start; j--) {
+       		printf(" %d", matrix[row-1][j]);
+   	    }
+    	    for (int i = row-2; i > start; i--) {
+        	printf(" %d", matrix[i][start]);
+   	    }
         }
     	start++;
     	column--;
     	row--;
     }
-
-
-
     return 0;
 }

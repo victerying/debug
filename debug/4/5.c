@@ -1,12 +1,16 @@
 #include <stdio.h>
-
+void swap(int*a,int*b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
 int main() {
     int n = 10;
     int m;
     int numbers[10];
     int i,j;
-
-    // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
@@ -19,14 +23,12 @@ int main() {
         }
     }
 
-    for (int m = 0; m < 10; m++) {
-        if (m != 9){
+    for (m = 0; m < 10; m++) {
+        if (m != 9) { 
             printf("%d ", numbers[m]);
-        }else{
+        }else {
             printf("%d", numbers[m]);
-        }
-        
+        }     
     }
-
     return 0;
 }
