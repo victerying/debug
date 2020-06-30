@@ -4,7 +4,7 @@ int main() {
     int n;
     scanf("%d",&n);
     
-    int a[51];
+    int a[50];
     if(n==2){
         printf("1");
     }
@@ -14,12 +14,12 @@ int main() {
     a[2]=1;
     a[3]=1;
     a[1]=0;
-        int i;
+    int i;
     for( i=4;i<=n;i++){
         a[i]=a[i-2]+a[i-3];
         
     }
-        printf("%d",a[i]);
+        printf("%d",a[n]);
     }
     return 0;
 }

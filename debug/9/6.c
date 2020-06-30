@@ -9,9 +9,9 @@ int main() {
     part[4]=1;
     scanf("%d",&N);
     if (N<=4) {printf("%d",part[N]);return 0;}
-    for(i=5;i<N;i++){
+    for(i=5;i<=N;i++){
         part[i]=part[i-2]+part[i-3];
     }
-    printf("%d",part[N-2]+part[N-3]);
+    printf("%d",part[N]);
     return 0;
 }
