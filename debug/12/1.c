@@ -18,7 +18,7 @@ int main()
     scanf("%lf", &r);;
     a = 2 * PI * r * 1000;
     printf("%.3lf\n", round(a) / 1000);
-    b = PI * r * r * 1000;
-    printf("%.3lf", round(b) / 1000);
+    b = PI * r * r;
+    printf("%.3lf", b);
     return 0;
 }

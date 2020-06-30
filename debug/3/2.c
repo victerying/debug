@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int matrix[100][100];
     int m;
     int n;
@@ -25,6 +26,7 @@ int main() {
 		}
     	    }
         }
+	return ;
     }
     int i = 0;
     while(i != k) {

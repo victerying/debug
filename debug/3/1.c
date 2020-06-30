@@ -13,7 +13,7 @@ int main() {
     {
     	for(j=0;j<n;j++)
 	{
-            printf("%d %d\n", i, j);
+            //printf("%d %d\n", i, j);
     	    scanf("%d", &matrix[i][j]);
 	}
     }
@@ -42,17 +42,36 @@ int main() {
     }
     if(m-2*x==1)
     {
-	for(i=0;i<n-2*x;i++)
-        {
-            printf(" %d",matrix[x][x+i]);
+        if(x == 0) {
+            for(i=0;i<n-2*x;i++)
+            {
+                printf("%d",matrix[x][x+i]);
+                if(i != n-2*x-1)
+                    printf(" ");
+            }
+        } else {
+            for(i=0;i<n-2*x;i++)
+            {
+                printf(" %d",matrix[x][x+i]);
+            }
         }
     }
     else if(n-2*x==1)
     {
-	for(i=0;i<m-2*x;i++)
-        {
-            printf(" %d",matrix[x+i][x]);
+        if(x == 0) {
+            for(i=0;i<m-2*x;i++)
+            {
+                printf("%d",matrix[x+i][x]);
+                if(i != m-2*x-1)
+                    printf(" ");
+            }
+        } else {
+            for(i=0;i<m-2*x;i++)
+            {
+                printf(" %d",matrix[x+i][x]);
+            }
         }
     }
     return 0;
 }
+

@@ -38,9 +38,15 @@ int main()
     	    for (int j = start+1; j < column; j++) {
         	printf(" %d", matrix[start][j]);
     	    }
+	    if(2 * start == m - 1) {
+                break;
+	    }
     	    for (int i = start + 1; i < row; i++) {
        		printf(" %d", matrix[i][column-1]);
-    	    }		
+    	    }	
+	    if(2 * start == n - 1) {
+                break;
+            }	
     	    for (int j = column-2; j >= start; j--) {
        		printf(" %d", matrix[row-1][j]);
    	    }
